@@ -13,7 +13,6 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -43,40 +42,6 @@ fun FTextButton(
         disabledContentColor = LocalContentColor.current.copy(0.38f),
     ),
     border: BorderStroke? = null,
-    contentPadding: PaddingValues = PaddingValues(horizontal = 10.dp, vertical = 5.dp),
-    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-    content: @Composable RowScope.() -> Unit,
-) =
-    FButton(
-        onClick = onClick,
-        modifier = modifier,
-        enabled = enabled,
-        shape = shape,
-        colors = colors,
-//        elevation = elevation,
-        border = border,
-        contentPadding = contentPadding,
-        interactionSource = interactionSource,
-        content = content
-    )
-
-/**
- * [OutlinedButton]
- */
-@Composable
-fun FOutlinedButton(
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    enabled: Boolean = true,
-    shape: Shape = ButtonDefaults.outlinedShape,
-    colors: ButtonColors = ButtonDefaults.outlinedButtonColors(
-        contentColor = LocalContentColor.current,
-        disabledContentColor = LocalContentColor.current.copy(0.38f),
-    ),
-    border: BorderStroke? = BorderStroke(
-        width = 1.dp,
-        color = LocalContentColor.current,
-    ),
     contentPadding: PaddingValues = PaddingValues(horizontal = 10.dp, vertical = 5.dp),
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     content: @Composable RowScope.() -> Unit,
