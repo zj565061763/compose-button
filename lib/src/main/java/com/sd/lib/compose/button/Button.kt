@@ -38,7 +38,10 @@ fun FTextButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     shape: Shape = ButtonDefaults.textShape,
-    colors: ButtonColors = ButtonDefaults.textButtonColors(),
+    colors: ButtonColors = ButtonDefaults.textButtonColors(
+        contentColor = LocalContentColor.current,
+        disabledContentColor = LocalContentColor.current.copy(0.38f),
+    ),
     border: BorderStroke? = null,
     contentPadding: PaddingValues = PaddingValues(horizontal = 10.dp, vertical = 5.dp),
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
@@ -66,10 +69,13 @@ fun FOutlinedButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     shape: Shape = ButtonDefaults.outlinedShape,
-    colors: ButtonColors = ButtonDefaults.outlinedButtonColors(),
+    colors: ButtonColors = ButtonDefaults.outlinedButtonColors(
+        contentColor = LocalContentColor.current,
+        disabledContentColor = LocalContentColor.current.copy(0.38f),
+    ),
     border: BorderStroke? = BorderStroke(
         width = 1.dp,
-        color = MaterialTheme.colorScheme.primary,
+        color = LocalContentColor.current,
     ),
     contentPadding: PaddingValues = PaddingValues(horizontal = 10.dp, vertical = 5.dp),
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
