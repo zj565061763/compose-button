@@ -18,43 +18,43 @@ import com.sd.lib.compose.button.FButton
 import com.sd.lib.compose.button.FTextButton
 
 class SampleButton : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            AppTheme {
-                Surface {
-                    ContentView()
-                }
-            }
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContent {
+      AppTheme {
+        Surface {
+          ContentView()
         }
+      }
     }
+  }
 }
 
 
 @Composable
 private fun ContentView(
-    modifier: Modifier = Modifier,
+  modifier: Modifier = Modifier,
 ) {
-    Column(
-        modifier = modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-    ) {
-        FButton(onClick = { /*TODO*/ }) {
-            Text(text = "1")
-        }
-
-        FTextButton(onClick = { /*TODO*/ }) {
-            Text(text = "1")
-        }
-
-        FTextButton(
-            onClick = { /*TODO*/ },
-            border = BorderStroke(
-                width = 1.dp,
-                color = LocalContentColor.current,
-            )
-        ) {
-            Text(text = "1")
-        }
+  Column(
+    modifier = modifier.fillMaxSize(),
+    horizontalAlignment = Alignment.CenterHorizontally,
+  ) {
+    FButton(onClick = { /*TODO*/ }) {
+      Text(text = "1")
     }
+
+    FTextButton(onClick = { /*TODO*/ }) {
+      Text(text = "1")
+    }
+
+    FTextButton(
+      onClick = { /*TODO*/ },
+      border = BorderStroke(
+        width = 1.dp,
+        color = LocalContentColor.current,
+      )
+    ) {
+      Text(text = "1")
+    }
+  }
 }
