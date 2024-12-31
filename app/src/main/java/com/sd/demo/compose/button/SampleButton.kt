@@ -30,7 +30,6 @@ class SampleButton : ComponentActivity() {
   }
 }
 
-
 @Composable
 private fun ContentView(
   modifier: Modifier = Modifier,
